@@ -24,6 +24,9 @@
     "@types/bun": "^1.4.2",
     "typescript": "6.0.3"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "engines": {
     "bun": "1.4.x"
   }
