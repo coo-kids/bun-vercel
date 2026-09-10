@@ -1,14 +1,29 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "Preserve",
+    "target": "esnext",
+    "module": "ESNext",
     "moduleResolution": "Bundler",
-    "lib": ["ESNext", "DOM"],
-    "types": ["bun"],
     "strict": true,
-    "noEmit": true,
-    "skipLibCheck": true
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "types": [
+      "bun"
+    ],
+    "paths": {
+      "@cookids/server/*": [
+        "./packages/server/*"
+      ]
+    }
   },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "server.ts",
+    "packages/**/*.ts",
+  ],
+  "exclude": [
+    "packages/*/node_modules"
+  ]
 }
